@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node main.js -120 220 30 0"
+    "test": "node main.js -120 220 30 0 040",
+    "test_fail_1": "node main.js 0x23",
+    "test_fail_2": "node main.js 3.3"
   },
   "keywords": [],
   "author": "",

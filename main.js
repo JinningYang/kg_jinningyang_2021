@@ -12,11 +12,13 @@ function changeSingle(num) {
 }
 
 function change(array) {
+    // For numbers with leading zero, we just ignore them. e.g. 001 will be treated the same as 1.
     let ans = "";
-    array.forEach((num) =>{
+    array.forEach((num) => {
         if (ans) {
             ans += ",";
         }
+        assert(/^-?\d+$/.test(num)); // We might have "-" in the front.
         ans += changeSingle(Number.parseInt(num));
     });
     return ans;
